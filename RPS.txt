@@ -1,0 +1,99 @@
+# 🎮 Arduino Serial Rock, Paper, Scissors
+
+An interactive Rock, Paper, Scissors game played entirely on an **Arduino Uno R3** using the computer's **Serial Monitor**. Developed as a standalone project requiring zero external components or wiring.
+
+## 📌 Project Overview
+This project turns an Arduino into a local game server. It takes inputs typed by the user through the Arduino IDE Serial Monitor, generates a pseudo-random choice for the computer using analog background noise (`analogRead(A0)`), evaluates the game logic, and triggers feedback using both text logs and the Arduino's **built-in LED (Pin 13)** when the player wins.
+
+---
+
+## 🛠️ Hardware Requirements
+* **Arduino Uno R3** (or any standard Arduino board)
+* **USB Cable** (to connect the board to your computer and power it)
+* *No breadboards, wires, or external sensors required!*
+
+---
+
+## ⚙️ How to Play
+1. Connect your Arduino Uno R3 to your computer via USB.
+2. Open the **Arduino IDE**, paste the code, and upload it to your board.
+3. Open the **Serial Monitor** (`Ctrl + Shift + M` or `Cmd + Shift + M`).
+4. Set the baud rate to **9600**.
+5. Type your choice and press **Enter**:
+   * **`1`** = Rock 🪨
+   * **`2`** = Paper 📄
+   * **`3`** = Scissors ✂️
+
+---
+
+## 💻 Source Code (`arduino_rps.ino`)
+
+```cpp
+// ==========================================
+// Arduino Serial Rock, Paper, Scissors Game
+// ==========================================
+
+void setup() {
+  Serial.begin(9600);
+  randomSeed(analogRead(A0));
+  
+  Serial.println("=========================================");
+  Serial.println("   WELCOME TO ARDUINO ROCK, PAPER, SCISSORS");
+  Serial.println("=========================================");
+  Serial.println("Instructions:");
+  Serial.println("Type 1 for Rock, 2 for Paper, 3 for Scissors");
+  Serial.println("-----------------------------------------");
+}
+
+void loop() {
+  if (Serial.available() > 0) {
+    int userChoice = Serial.parseInt();
+    
+    while (Serial.available() > 0) {
+      Serial.read();
+    }
+    
+    if (userChoice >= 1 && userChoice <= 3) {
+      int computerChoice = random(1, 4);
+      
+      Serial.print("You chose: ");
+      printChoiceName(userChoice);
+      
+      Serial.print("Computer chose: ");
+      printChoiceName(computerChoice);
+      
+      determineWinner(userChoice, computerChoice);
+      
+      Serial.println("-----------------------------------------");
+      Serial.println("Play again! Type 1, 2, or 3:");
+    } else {
+      Serial.println("Invalid choice! Please type 1, 2, or 3.");
+    }
+  }
+}
+
+void printChoiceName(int choice) {
+  if (choice == 1) Serial.println("Rock 🪨");
+  else if (choice == 2) Serial.println("Paper 📄");
+  else if (choice == 3) Serial.println("Scissors ✂️");
+}
+
+void determineWinner(int player, int computer) {
+  if (player == computer) {
+    Serial.println("Result: It's a TIE! 🤝");
+  } 
+  else if ((player == 1 && computer == 3) || 
+           (player == 2 && computer == 1) || 
+           (player == 3 && computer == 2)) {
+    Serial.println("Result: You WIN! 🎉");
+    for(int i = 0; i < 3; i++) {
+      digitalWrite(LED_BUILTIN, HIGH);
+      delay(150);
+      digitalWrite(LED_BUILTIN, LOW);
+      delay(150);
+    }
+  } 
+  else {
+    Serial.println("Result: Computer WINS! 🤖");
+  }
+}
