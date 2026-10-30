@@ -16,9 +16,9 @@ void setup() {
   Serial.println("=========================================");
   Serial.println("Instructions:");
   Serial.println("Type one of the following numbers and press Enter:");
-  Serial.println("  1 -> Rock 🪨");
-  Serial.println("  2 -> Paper 📄");
-  Serial.println("  3 -> Scissors ✂️");
+  Serial.println("  R -> Rock 🪨");
+  Serial.println("  P -> Paper 📄");
+  Serial.println("  R -> Scissors ✂️");
   Serial.println("-----------------------------------------");
   Serial.println("Type your choice (1, 2, or 3) to start!");
   Serial.println("");
@@ -62,11 +62,11 @@ void loop() {
 
 // Helper function to print text name of choices
 void printChoiceName(int choice) {
-  if (choice == 1) {
+  if (choice == "R") {
     Serial.println("Rock 🪨");
-  } else if (choice == 2) {
+  } else if (choice == "P") {
     Serial.println("Paper 📄");
-  } else if (choice == 3) {
+  } else if (choice == "S") {
     Serial.println("Scissors ✂️");
   }
 }
