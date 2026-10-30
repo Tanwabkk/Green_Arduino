@@ -16,9 +16,9 @@ void setup() {
   Serial.println("=========================================");
   Serial.println("Instructions:");
   Serial.println("Type one of the following numbers and press Enter:");
-  Serial.println("  R -> Rock 🪨");
-  Serial.println("  P -> Paper 📄");
-  Serial.println("  R -> Scissors ✂️");
+  Serial.println("  R or r -> Rock 🪨");
+  Serial.println("  P or p -> Paper 📄");
+  Serial.println("  S or s-> Scissors ✂️");
   Serial.println("-----------------------------------------");
   Serial.println("Type your choice (1, 2, or 3) to start!");
   Serial.println("");
