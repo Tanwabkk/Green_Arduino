@@ -27,8 +27,8 @@ void setup() {
 void loop() {
   // Check if data is available in the Serial Monitor input
   if (Serial.available() > 0) {
-    // Read the user's input as an integer
-    int userChoice = Serial.parseInt();
+    // Read the user's input as a character and convert it to uppercase
+    char userChoice = toupper(Serial.read());
     
     // Clear any leftover characters in the serial buffer (like newline characters)
     while (Serial.available() > 0) {
@@ -36,9 +36,10 @@ void loop() {
     }
     
     // Validate user input
-    if (userChoice >= 1 && userChoice <= 3) {
-      // Computer makes a random choice between 1 and 3
-      int computerChoice = random(1, 4); // Generates 1, 2, or 3
+    if (userChoice == 'R' || userChoice == 'P' || userChoice == 'S') {
+      // Computer makes a random choice: 0 for Rock, 1 for Paper, 2 for Scissors
+      char choices[3] = {'R', 'P', 'S'};
+      char computerChoice = choices[random(0, 3)]; 
       
       // Print player's choice
       Serial.print("You chose: ");
@@ -52,33 +53,35 @@ void loop() {
       determineWinner(userChoice, computerChoice);
       
       Serial.println("-----------------------------------------");
-      Serial.println("Play again! Type 1 (Rock), 2 (Paper), or 3 (Scissors):");
+      Serial.println("Play again! Type R, P, or S:");
     } else {
-      // Handle invalid input
-      Serial.println("Invalid choice! Please type 1 for Rock, 2 for Paper, or 3 for Scissors.");
+      // Handle invalid input (ignoring accidental newline characters/spaces if any slipped through)
+      if (userChoice != '\n' && userChoice != '\r') {
+        Serial.println("Invalid choice! Please type R (Rock), P (Paper), or S (Scissors).");
+      }
     }
   }
 }
 
 // Helper function to print text name of choices
-void printChoiceName(int choice) {
-  if (choice == "R") {
+void printChoiceName(char choice) {
+  if (choice == 'R') {
     Serial.println("Rock 🪨");
-  } else if (choice == "P") {
+  } else if (choice == 'P') {
     Serial.println("Paper 📄");
-  } else if (choice == "S") {
+  } else if (choice == 'S') {
     Serial.println("Scissors ✂️");
   }
 }
 
 // Helper function to calculate game rules and print result
-void determineWinner(int player, int computer) {
+void determineWinner(char player, char computer) {
   if (player == computer) {
     Serial.println("Result: It's a TIE! 🤝");
   } 
-  else if ((player == 1 && computer == 3) || 
-           (player == 2 && computer == 1) || 
-           (player == 3 && computer == 2)) {
+  else if ((player == 'R' && computer == 'S') || 
+           (player == 'P' && computer == 'R') || 
+           (player == 'S' && computer == 'P')) {
     Serial.println("Result: You WIN! 🎉");
     
     // Fun bonus: Flash the built-in LED (Pin 13) 3 times when you win!
