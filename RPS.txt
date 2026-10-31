@@ -1,34 +1,47 @@
-# 🎮 Arduino Serial Rock, Paper, Scissors
+🎮 Arduino Serial Rock, Paper, Scissors
 
-An interactive Rock, Paper, Scissors game played entirely on an **Arduino Uno R3** using the computer's **Serial Monitor**. Developed as a standalone project requiring zero external components or wiring.
+An interactive Rock, Paper, Scissors game played entirely on an Arduino Uno R3 using your computer's Serial Monitor. Developed as a standalone project requiring zero external components or wiring.
 
-## 📌 Project Overview
-This project turns an Arduino into a local game server. It takes inputs typed by the user through the Arduino IDE Serial Monitor, generates a pseudo-random choice for the computer using analog background noise (`analogRead(A0)`), evaluates the game logic, and triggers feedback using both text logs and the Arduino's **built-in LED (Pin 13)** when the player wins.
+📌 Project Overview
 
----
+This project turns your Arduino into a local game server. It accepts user input typed directly through the Arduino IDE Serial Monitor, generates a pseudo-random choice for the computer using analog background noise (analogRead(A0)), evaluates the game logic, and triggers celebratory visual feedback using the Arduino's built-in LED (Pin 13) whenever you win!
 
-## 🛠️ Hardware Requirements
-* **Arduino Uno R3** (or any standard Arduino board)
-* **USB Cable** (to connect the board to your computer and power it)
-* *No breadboards, wires, or external sensors required!*
+✨ Features
 
----
+Zero Hardware Setup: No breadboards, resistors, or jumper wires needed—just your Arduino and a USB cable.
 
-## ⚙️ How to Play
-1. Connect your Arduino Uno R3 to your computer via USB.
-2. Open the **Arduino IDE**, paste the code, and upload it to your board.
-3. Open the **Serial Monitor** (`Ctrl + Shift + M` or `Cmd + Shift + M`).
-4. Set the baud rate to **9600**.
-5. Type your choice and press **Enter**:
-   * **`1`** = Rock 🪨
-   * **`2`** = Paper 📄
-   * **`3`** = Scissors ✂️
+Interactive Serial I/O: Play continuous rounds directly from your computer keyboard.
 
----
+True Randomness Seed: Uses floating analog pin noise to ensure random computer choices every session.
 
-## 💻 Source Code (`arduino_rps.ino`)
+LED Celebration: Flashes the built-in LED whenever the player claims victory!
 
-```cpp
+🛠️ Hardware Requirements
+
+Arduino Uno R3 (or any standard Arduino board with an onboard LED)
+
+USB Cable (to connect the board to your computer and power it)
+
+⚙️ How to Play
+
+Connect your Arduino board to your computer via USB.
+
+Open the Arduino IDE, paste the source code, and upload it to your board.
+
+Open the Serial Monitor (Ctrl + Shift + M on Windows/Linux or Cmd + Shift + M on macOS).
+
+Set the baud rate dropdown to 9600.
+
+Type your choice and press Enter:
+
+1 = Rock 🪨
+
+2 = Paper 📄
+
+3 = Scissors ✂️
+
+💻 Source Code (arduino_rps.ino)
+
 // ==========================================
 // Arduino Serial Rock, Paper, Scissors Game
 // ==========================================
