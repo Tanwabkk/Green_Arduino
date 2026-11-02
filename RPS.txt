@@ -34,11 +34,11 @@ Set the baud rate dropdown to 9600.
 
 Type your choice and press Enter:
 
-1 = Rock 🪨
+1 = Rock 
 
-2 = Paper 📄
+2 = Paper 
 
-3 = Scissors ✂️
+3 = Scissors 
 
 // ==========================================
 // Arduino Serial Rock, Paper, Scissors Game
