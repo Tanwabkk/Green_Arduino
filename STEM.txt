@@ -4,3 +4,11 @@ This is my note for my school STEM project,
 Which is fine i have a two week. 
 
   First the Meterial i need
+1. LCD monitor 
+2. WaterLevel sensor 
+3. Arduino UNo
+4. Jumper wires 
+5. 3 LED
+
+The project is a flood warning sensor with 3 different level. 
+
