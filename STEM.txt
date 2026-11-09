@@ -6,9 +6,9 @@ Which is fine i have a two week.
   First the Meterial i need
 1. LCD monitor 
 2. WaterLevel sensor 
-3. Arduino UNo
-4. Jumper wires 
-5. 3 LED
+3. Arduino UNo R3 
+4. 5 Jumper wires 
+5. 3 LED 3mm 
 6. BreadBoard (Optional)
 
 The project is a flood warning sensor with 3 different level. 
