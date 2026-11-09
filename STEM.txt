@@ -4,7 +4,7 @@ This is my note for my school STEM project,
 Which is fine i have a two week. 
 
   First the Meterial i need
-1. LCD monitor 
+1. LCD monitor 1602
 2. WaterLevel sensor 
 3. Arduino UNo R3 
 4. 5 Jumper wires 
