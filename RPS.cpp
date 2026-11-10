@@ -20,7 +20,7 @@ void setup() {
   Serial.println("  P or p -> Paper ");
   Serial.println("  S or s-> Scissors ");
   Serial.println("-----------------------------------------");
-  Serial.println("Type your choice (1, 2, or 3) to start!");
+  Serial.println("Type your choice (r, p, or s) to start!");
   Serial.println("");
 }
 
