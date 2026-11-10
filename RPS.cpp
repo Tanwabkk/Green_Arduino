@@ -66,18 +66,18 @@ void loop() {
 // Helper function to print text name of choices
 void printChoiceName(char choice) {
   if (choice == 'R') {
-    Serial.println("Rock 🪨");
+    Serial.println("Rock ");
   } else if (choice == 'P') {
-    Serial.println("Paper 📄");
+    Serial.println("Paper ");
   } else if (choice == 'S') {
-    Serial.println("Scissors ✂️");
+    Serial.println("Scissors ");
   }
 }
 
 // Helper function to calculate game rules and print result
 void determineWinner(char player, char computer) {
   if (player == computer) {
-    Serial.println("Result: It's a TIE! 🤝");
+    Serial.println("Result: It's a TIE! ");
   } 
   else if ((player == 'R' && computer == 'S') || 
            (player == 'P' && computer == 'R') || 
