@@ -1,6 +1,6 @@
 Automated Flood Warning System
 
-A STEM project for Grade 12 featuring an Arduino Uno R3-based real-time flood monitoring system. The project uses an ultrasonic sensor to measure water levels continuously and displays live status updates on an LCD 1602 display, alongside a 3-LED visual alert system (Green, Yellow, Red). All electronics are safely housed inside a transparent custom enclosure for clean presentation and structural protection.
+A STEM project for Grade 12 featuring an Arduino Uno R3-based real-time flood monitoring system. The project uses an ultrasonic sensor to measure water levels continuously and displays live status updates on an LCD 1602 display, alongside a 3mm 3-LED visual alert system (Green, Yellow, Red). All electronics are safely housed inside a transparent custom enclosure for clean presentation and structural protection.
 
 
 Project Features
