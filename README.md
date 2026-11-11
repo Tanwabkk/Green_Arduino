@@ -18,8 +18,8 @@ Microcontroller & Sensing:
 - HC-SR04 Ultrasonic Distance Sensor
 
 Outputs & Visuals:
-- LCD 1602 Screen (with I2C Module)
-- 3x LEDs (Green, Yellow, Red)
+- LCD 1602 or 16x2 Screen (with I2C Module)
+- 3x LEDs 3mm (Green, Yellow, Red)
 - 3x 220 Ohm Resistors (for LEDs)
 
 Other Components:
