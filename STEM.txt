@@ -13,3 +13,20 @@ Which is fine i have a two week.
 
 The project is a flood warning sensor with 3 different level. 
 so the steps are just learning how each component work then for the code it's a no problem since AI will generated that for you. 
+
+Wiring 
+
+1602 LCD --> Arduino UNO 
+GND --> GND
+VCC --> 5V
+SDA --> Analog In A4
+SCL --> Analog In A5
+
+Rain Drop Sensor --> Arduino UNO 
+S --> Analog In A0
++ (VCC) --> 5V 
+- (GND) --> GND
+
+Libraries 
+
+LiquidCrystal IC2 by Frank de Brabandar
