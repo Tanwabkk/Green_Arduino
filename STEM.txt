@@ -30,3 +30,7 @@ S (Analog out) --> Analog In A0
 Libraries 
 
 LiquidCrystal IC2 by Frank de Brabandar
+
+Design: 
+
+For the design, i might put a transparent box and put the components inside them. 
