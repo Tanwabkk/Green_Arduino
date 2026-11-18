@@ -42,4 +42,5 @@ System Logic & Status Levels
 1. SAFE (Green LED ON): Water level is within normal range (far from sensor).
 2. WARNING (Yellow LED ON): Water level is rising past the caution threshold.
 3. ALARM (Red LED ON): High water level detected; flood alert triggered.
-## 📝 License
+
+
