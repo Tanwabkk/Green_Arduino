@@ -43,4 +43,8 @@ System Logic & Status Levels
 2. WARNING (Yellow LED ON): Water level is rising past the caution threshold.
 3. ALARM (Red LED ON): High water level detected; flood alert triggered.
 
+Design 
+
+there are two options in the design part, one is using cardboard and make it portable. 
+Second is put it in an invisible box to make it a punk looking design. 
 
