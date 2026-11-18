@@ -26,6 +26,7 @@ Other Components:
 - Breadboard & Jumper Wires
 - Transparent Enclosure Box
 - Power Supply / USB Cable for Arduino
+- Male to female wires
 
 
 Development Setup & Required Libraries
