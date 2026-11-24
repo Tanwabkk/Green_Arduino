@@ -46,6 +46,6 @@ System Logic & Status Levels
 
 Design 
 
-there are two options in the design part, one is using cardboard and make it portable. 
-Second is put it in an invisible box to make it a punk looking design. 
-
+- Transparent box
+- cut minimal holes for the wire
+- screen up top
