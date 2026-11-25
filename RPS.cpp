@@ -84,7 +84,7 @@ void determineWinner(char player, char computer) {
            (player == 'S' && computer == 'P')) {
     Serial.println("Result: You WIN! 🎉");
     
-    // Fun bonus: Flash the built-in LED (Pin 13) 3 times when you win!
+  
     for(int i = 0; i < 3; i++) {
       digitalWrite(LED_BUILTIN, HIGH);
       delay(150);
