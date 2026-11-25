@@ -1,6 +1,3 @@
-// ==========================================
-// Arduino Serial Rock, Paper, Scissors Game
-// ==========================================
 
 void setup() {
   // Initialize serial communication at 9600 baud
