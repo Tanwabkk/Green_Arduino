@@ -1,6 +1,5 @@
 
 void setup() {
-  // Initialize serial communication at 9600 baud
   Serial.begin(9600);
   
   // Seed the random number generator using analog noise from unconnected Pin A0
